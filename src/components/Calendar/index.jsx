@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import classnames from "classnames";
-
-// import * as rightSideOfTheCalendar from "./leftSideOfTheCalendar";
 import * as calendar from "./calendar";
 import style from "./calendar.module.css";
-import * as leftSideOfTheCalendar from "../leftSideOfTheCalendar";
+import LeftSideOfTheCalendar from "./leftSideOfTheCalendar";
 
 export default class Calendar extends Component {
   static defaultProps = {
@@ -27,12 +25,10 @@ export default class Calendar extends Component {
       "Пятница",
       "Суббота",
     ],
-    leftSideOfTheCalendar,
   };
   state = {
     date: this.props.date,
     currentDate: new Date(),
-    leftSideOfTheCalendar,
   };
   get year() {
     return this.state.date.getFullYear();
@@ -47,20 +43,11 @@ export default class Calendar extends Component {
     const {
       abbreviationNameOfTheDayOfTheWeek,
       fullNameOfTheDayOfTheWeek,
-      leftSideOfTheCalendar,
     } = this.props;
     const { currentDate } = this.state;
     return (
       <section className={style.calendar}>
-        <leftSideOfTheCalendar
-          fullNameOfTheDayOfTheWeek={fullNameOfTheDayOfTheWeek}
-        />
-        {/* <article className={style.dayOfWeekAndDayOfMonth}>
-          <h1 className={style.dayOfWeek}>
-            {fullNameOfTheDayOfTheWeek[new Date().getDay()]}
-          </h1>
-          <p className={style.dayOfTheMonth}>{this.day}</p>
-        </article> */}
+        <LeftSideOfTheCalendar fullNameOfTheDayOfTheWeek={fullNameOfTheDayOfTheWeek}/>
         <article className={style.contentCalendar}>
           <h1 className={style.monthAndYear}>
             {new Date().toLocaleString("ru", { month: "long" })}

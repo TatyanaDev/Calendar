@@ -7,20 +7,6 @@
   text-align: center;
   margin: 0 auto;
 }
-/* .dayOfWeekAndDayOfMonth {
-  min-width: 500px;
-  background-color: #38cec4;
-  padding: 50px;
-  color: white;
-}
-.dayOfWeek {
-  font-size: 50px;
-  margin-bottom: 60px;
-  font-weight: normal;
-}
-.dayOfTheMonth {
-  font-size: 300px;
-} */
 .contentCalendar {
   min-width: 500px;
   background-color: #f5f5f5;
