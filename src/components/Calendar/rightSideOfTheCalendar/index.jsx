@@ -2,8 +2,6 @@ import { Component } from "react";
 import style from "./rightSideOfTheCalendar.module.css";
 import MonthNameAndYear from "./monthNameAndYear";
 import DayOfWeek from "./dayOfWeek";
-import classnames from "classnames";
-import * as calendar from "../calendar";
 import Month from "./month";
 
 export default class RightSideOfTheCalendar extends Component {
@@ -34,29 +32,7 @@ export default class RightSideOfTheCalendar extends Component {
               }
             />
           </thead>
-          {/* <Month currentDate={currentDate}/> */}
-          <tbody>
-              {calendar
-                .getMonthData(this.year, this.month, this.day)
-                .map((week, index) => (
-                  <tr key={index} className={style.todaysDate}>
-                    {week.map((date, index) =>
-                      date ? (
-                        <td
-                          key={index}
-                          className={classnames(style.day, {
-                            [style.today]: calendar.areEqual(date, currentDate),
-                          })}
-                        >
-                          {date.getDate()}
-                        </td>
-                      ) : (
-                        <td key={index} />
-                      )
-                    )}
-                  </tr>
-                ))}
-            </tbody>
+          <Month currentDate={currentDate}/>
         </table>
       </article>
     );
