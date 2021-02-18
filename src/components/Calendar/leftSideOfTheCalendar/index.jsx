@@ -1,18 +1,18 @@
 import { Component } from "react";
 import style from "./leftSideOfTheCalendar.module.css";
+import WeekDayName from "./weekDayName";
+import DayOfTheCurrentMonth from "./dayOfTheCurrentMonth";
 
 export default class LeftSideOfTheCalendar extends Component {
   render() {
-    const {
-      fullNameOfTheDayOfTheWeek,
-    } = this.props;
+    const { fullNameOfTheDayOfTheWeek } = this.props;
     return (
-        <article className={style.dayOfWeekAndDayOfMonth}>
-          <h1 className={style.dayOfWeek}>
-            {fullNameOfTheDayOfTheWeek[new Date().getDay()]}
-          </h1>
-          <p className={style.dayOfTheMonth}>{this.day}</p>
-        </article>
+      <article className={style.dayOfWeekAndDayOfMonth}>
+        <WeekDayName
+          fullNameOfTheDayOfTheWeek={fullNameOfTheDayOfTheWeek}
+        />
+        <DayOfTheCurrentMonth />
+      </article>
     );
   }
 }
