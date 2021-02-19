@@ -1,34 +1,17 @@
 import { Component } from "react";
 import classnames from "classnames";
 import style from "./day.module.css";
-import * as calendar from "../month";
+import {areEqual} from "../../month";
 
 export default class Day extends Component {
   render() {
-    const { currentDate, weeksOfTheMonth } = this.props;
+    const { currentDate, date } = this.props;
+    const classname= classnames(style.day, { [style.today]: areEqual(date, currentDate), })
     return (
-      <tr className={style.todaysDate}>
-        {weeksOfTheMonth.map((date, index) =>
-          date ? (
+      (<td className={classname}>
+        {date.getDate()}</td>)
 
-
-
-            <td
-              key={index}
-              className={classnames(style.day, {
-                [style.today]: calendar.areEqual(date, currentDate),
-              })}
-            >
-              {date.getDate()}
-            </td>
-          ) : (
-              <td key={index} />
-            )
-
-            
-        )}
-        
-      </tr>
-    );
-  }
+    )
+  };
 }
+
