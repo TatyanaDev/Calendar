@@ -1,7 +1,5 @@
 import { Component } from "react";
-import style from "./month.module.css";
 import * as calendar from "./month";
-import classnames from "classnames";
 import Week from "./week";
 
 export default class Month extends Component {
@@ -17,9 +15,9 @@ export default class Month extends Component {
       <tbody>
         {calendar
           .getMonthData(this.year, this.month)
-          .map((arrayOfWeek) => <Week arrayOfWeek={arrayOfWeek} currentDate={currentDate} />
+          .map((
+            weeksOfTheMonth) => <Week weeksOfTheMonth={weeksOfTheMonth} currentDate={currentDate} />
           )
-
         }
       </tbody>
     );

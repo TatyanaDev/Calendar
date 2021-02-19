@@ -1,17 +1,16 @@
 import { Component } from "react";
 import classnames from "classnames";
-import style from "./week.module.css";
+import style from "./day.module.css";
 import * as calendar from "../month";
-// import Day from "./day";
 
-export default class Week extends Component {
-
+export default class Day extends Component {
   render() {
     const { currentDate, weeksOfTheMonth } = this.props;
     return (
       <tr className={style.todaysDate}>
         {weeksOfTheMonth.map((date, index) =>
           date ? (
+
 
 
             <td
@@ -24,10 +23,11 @@ export default class Week extends Component {
             </td>
           ) : (
               <td key={index} />
-           
-           
-              )
+            )
+
+            
         )}
+        
       </tr>
     );
   }
