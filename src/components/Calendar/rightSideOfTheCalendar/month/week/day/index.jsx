@@ -1,6 +1,6 @@
 import { Component } from "react";
 import classnames from "classnames";
-import style from "./day.module.css";
+import style from "./day.module.scss";
 import {areEqual} from "../../month";
 
 export default class Day extends Component {

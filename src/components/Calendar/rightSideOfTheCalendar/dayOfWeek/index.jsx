@@ -1,5 +1,5 @@
 import { Component } from "react";
-import style from "./dayOfWeek.module.css";
+import style from "./dayOfWeek.module.scss";
 
 export default class DayOfWeek extends Component {
   render() {

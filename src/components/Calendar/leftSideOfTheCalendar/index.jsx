@@ -1,5 +1,5 @@
 import { Component } from "react";
-import style from "./leftSideOfTheCalendar.module.css";
+import style from "./leftSideOfTheCalendar.module.scss";
 import WeekDayName from "./weekDayName";
 import DayOfTheCurrentMonth from "./dayOfTheCurrentMonth";
 

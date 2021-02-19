@@ -1,5 +1,5 @@
 import { Component } from "react";
-import style from "./weekDayName.module.css";
+import style from "./weekDayName.module.scss";
 
 export default class DayOfTheCurrentMonth extends Component {
   render() {

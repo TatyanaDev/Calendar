@@ -1,5 +1,5 @@
 import { Component } from "react";
-import style from "./monthNameAndYear.module.css";
+import style from "./monthNameAndYear.module.scss";
 
 export default class MonthNameAndYear extends Component {
   static defaultProps = {

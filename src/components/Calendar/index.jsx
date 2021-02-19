@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import style from "./calendar.module.css";
+import style from "./calendar.module.scss";
 import LeftSideOfTheCalendar from "./leftSideOfTheCalendar";
 import RightSideOfTheCalendar from "./rightSideOfTheCalendar";
 
