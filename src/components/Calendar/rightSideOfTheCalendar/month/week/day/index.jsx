@@ -9,7 +9,7 @@ export default class Day extends Component {
     const classname= classnames(style.day, { [style.today]: areEqual(date, currentDate), })
     return (
       (<td className={classname}>
-        {date.getDate()}</td>)
+        {date?.getDate()}</td>)
 
     )
   };
