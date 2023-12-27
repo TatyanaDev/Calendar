@@ -1,4 +1,4 @@
-import Calendar from "./components/Calendar";
+import Calendar from "./page/Calendar";
 
 const App = () => <Calendar />;
 

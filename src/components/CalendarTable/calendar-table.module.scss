@@ -1,0 +1,23 @@
+.calendarTable {
+  margin: 0 auto;
+}
+
+.dayOfWeek {
+  padding: 10px;
+  font-size: 30px;
+  color: #eb1b57;
+  font-weight: 600;
+}
+
+.dayOfMonth {
+  padding: 10px;
+  font-size: 30px;
+  color: #b7b7b7;
+  font-weight: 600;
+}
+
+.today {
+  border: 5px solid #eb1b57;
+  border-radius: 50%;
+  color: #eb1b57;
+}
